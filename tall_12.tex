@@ -1,0 +1,53 @@
+\begin{tikzpicture}[xscale=7.0,yscale=7.0]
+\draw [help lines,step=0.1] (0,0) grid (1,1);
+\filldraw[line width=0.5pt,color=blue!25!white,draw opacity=0.15,fill opacity = 0.5] plot file {tall_12_hg.dat};
+\draw[line width=0.5pt,color=black] plot file {tall_12_XY.dat};
+\coordinate (oneone) at (1,1);
+\filldraw [red,draw opacity=0.75] (oneone) circle (0.1pt);
+\coordinate (bk1) at (0,0);
+\coordinate (bk2) at (0.049541,0.0018363);
+\coordinate (bk3) at (0.10846,0.011214);
+\coordinate (bk4) at (0.16436,0.026502);
+\coordinate (bk5) at (0.21954,0.047673);
+\coordinate (bk6) at (0.2763,0.075785);
+\coordinate (bk7) at (0.33553,0.11194);
+\coordinate (bk8) at (0.40024,0.1594);
+\coordinate (bk9) at (0.47375,0.22342);
+\coordinate (bk10) at (0.55735,0.30929);
+\coordinate (bk11) at (0.66081,0.43435);
+\coordinate (bk12) at (0.80746,0.64624);
+\coordinate (bk13) at (1,1);
+\filldraw [red,draw opacity=0.75] (bk2) circle (0.1pt) node[right] {\tiny \texttt{(0.04954,0.001836)}};
+\filldraw [red,draw opacity=0.75] (bk3) circle (0.1pt) node[right] {\tiny \texttt{(0.1085,0.01121)}};
+\filldraw [red,draw opacity=0.75] (bk4) circle (0.1pt) node[right] {\tiny \texttt{(0.1644,0.0265)}};
+\filldraw [red,draw opacity=0.75] (bk5) circle (0.1pt) node[right] {\tiny \texttt{(0.2195,0.04767)}};
+\filldraw [red,draw opacity=0.75] (bk6) circle (0.1pt) node[right] {\tiny \texttt{(0.2763,0.07578)}};
+\filldraw [red,draw opacity=0.75] (bk7) circle (0.1pt) node[right] {\tiny \texttt{(0.3355,0.1119)}};
+\filldraw [red,draw opacity=0.75] (bk8) circle (0.1pt) node[right] {\tiny \texttt{(0.4002,0.1594)}};
+\filldraw [red,draw opacity=0.75] (bk9) circle (0.1pt) node[right] {\tiny \texttt{(0.4738,0.2234)}};
+\filldraw [red,draw opacity=0.75] (bk10) circle (0.1pt) node[right] {\tiny \texttt{(0.5574,0.3093)}};
+\filldraw [red,draw opacity=0.75] (bk11) circle (0.1pt) node[right] {\tiny \texttt{(0.6608,0.4344)}};
+\filldraw [red,draw opacity=0.75] (bk12) circle (0.1pt) node[right] {\tiny \texttt{(0.8075,0.6462)}};
+\draw[line width=0.75pt,color=red,draw opacity=0.75] (bk1) -- (bk2); 
+\draw[line width=0.75pt,color=red,draw opacity=0.75] (bk2) -- (bk3); 
+\draw[line width=0.75pt,color=red,draw opacity=0.75] (bk3) -- (bk4); 
+\draw[line width=0.75pt,color=red,draw opacity=0.75] (bk4) -- (bk5); 
+\draw[line width=0.75pt,color=red,draw opacity=0.75] (bk5) -- (bk6); 
+\draw[line width=0.75pt,color=red,draw opacity=0.75] (bk6) -- (bk7); 
+\draw[line width=0.75pt,color=red,draw opacity=0.75] (bk7) -- (bk8); 
+\draw[line width=0.75pt,color=red,draw opacity=0.75] (bk8) -- (bk9); 
+\draw[line width=0.75pt,color=red,draw opacity=0.75] (bk9) -- (bk10); 
+\draw[line width=0.75pt,color=red,draw opacity=0.75] (bk10) -- (bk11); 
+\draw[line width=0.75pt,color=red,draw opacity=0.75] (bk11) -- (bk12); 
+\draw[line width=0.75pt,color=red,draw opacity=0.75] (bk12) -- (bk13); 
+\draw[->] (0,0) -- node[midway,yshift=-0.75cm] {\footnotesize flow} (1,0);
+\draw[->] (0,0) -- node[rotate=90,midway,yshift=0.75cm] {\footnotesize loss} (0,1) ;
+\foreach \x/\xtext in {0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1.0}
+\draw (\x cm,0pt) -- (\x cm,-0.5pt) node[anchor=north] {\footnotesize \xtext};
+\foreach \y/\ytext in {0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1.0}
+\draw (0.0pt,\y cm) -- (-0.25pt,\y cm) node[anchor=east,xshift=0.5mm] {\footnotesize \ytext};
+\draw[line width=0.5pt,color=green,draw opacity=0.75] plot file {tall_12_err.dat};
+\foreach \y/\ytext in {0/-0.1,0.1/-0.08,0.2/-0.06,0.3/-0.04,0.4/-0.02,0.5/0.0,0.6/0.02,0.7/0.04,0.8/0.06,0.9/0.08,1.0/0.1}
+\draw (1cm,\y cm) -- (1.01cm,\y cm) node[anchor=west,xshift=-0.75mm] {\tiny \textcolor{green}{\ytext}};
+\node[rotate=90] at (1.1,0.5) {\footnotesize \textcolor{green}{error}};
+\end{tikzpicture}
