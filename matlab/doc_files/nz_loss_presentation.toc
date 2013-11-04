@@ -1,5 +1,0 @@
-\beamer@endinputifotherversion {3.10pt}
-\beamer@sectionintoc {1}{Effect of power factor on power transfer -- thermal limits}{2}{0}{1}
-\beamer@sectionintoc {2}{Weighted with average circuit and transformer usage during 2010}{7}{0}{2}
-\beamer@sectionintoc {3}{Transmission circuits loss segments (weighted with average circuit usage during 2010)}{12}{0}{3}
-\beamer@sectionintoc {4}{Transformer circuits loss segments (weighted with average circuit usage during 2010)}{17}{0}{4}
