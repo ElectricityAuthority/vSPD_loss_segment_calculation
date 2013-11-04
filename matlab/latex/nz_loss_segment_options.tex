@@ -1,0 +1,263 @@
+%\documentclass[handout]{beamer}
+\documentclass{beamer}
+%\usepackage{beamerthemesplit}
+%\usepackage{logicthemelive}
+\usepackage{cite}
+\usepackage{enumitem}
+\usepackage{pgf}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{datatool}
+\usepackage{dataplot}
+\usepackage{xcolor}
+\usetikzlibrary{calc,through,decorations.pathmorphing}
+\usetikzlibrary{decorations.text}
+\usetikzlibrary{trees}
+\usetikzlibrary{fit}
+\usetikzlibrary{backgrounds}
+\usetikzlibrary{positioning}
+\usetikzlibrary{shapes,arrows}
+\usetikzlibrary{shadows}
+\usetikzlibrary{calendar}
+%\usepackage[cmex10]{amsmath}
+%\usepackage{array}
+\usepackage{ctable}
+\usepackage{dcolumn}
+\usepackage{mdwmath}
+\usepackage{mdwtab}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+%\usepackage{electComp}
+%\usepackage{amsmath}
+
+\title[Options for improved loss modelling in the New Zealand Electricity Market]{\Large Options for improved loss modelling in the New Zealand Electricity Market}
+%\author{Dr David Hume}
+%\subtitle{\tiny EEA Conference - 23rd June, 2011} % (optional)
+%\author[David Hume]{\normalsize David Hume \\ \tiny {\texttt{david.hume@ea.govt.nz}} \\ \tiny Electricity Authority of New Zealand}
+%\institute{\tiny Electricity Authority of New Zealand}
+\date{}
+
+\makeatletter
+  \newcommand\tinyv{\@setfontsize\tinyv{4pt}{6}}
+\makeatother
+
+
+\begin{document}
+
+\frame{\titlepage}
+
+
+%\frame{\tableofcontents}
+
+\section[2 loss segments]{2 loss segments}
+
+ 
+\frame{
+ \frametitle{2 loss segments}{no weighting}
+\vspace{-10mm}
+\begin{center}
+\include{default_2}
+\end{center}
+}
+
+\frame{
+ \frametitle{2 loss segments}{line and transformer usage weighting}
+\vspace{-10mm}
+\begin{center}
+\include{tall_2}
+\end{center}
+}
+
+\frame{
+ \frametitle{2 loss segments}{line usage weighting}
+\vspace{-10mm}
+\begin{center}
+\include{tcuse_2}
+\end{center}
+}
+
+\frame{
+ \frametitle{2 loss segments}{transformer usage weighting}
+\vspace{-10mm}
+\begin{center}
+\include{txuse_2}
+\end{center}
+}
+
+
+\section[3 loss segments]{3 loss segments}
+
+\frame{
+ \frametitle{3 loss segments}{no weighting}
+\vspace{-10mm}
+\begin{center}
+\include{default_3}
+\end{center}
+}
+
+\frame{
+ \frametitle{3 loss segments}{line and transformer usage weighting}
+\vspace{-10mm}
+\begin{center}
+\include{tall_3}
+\end{center}
+}
+
+\frame{
+ \frametitle{3 loss segments}{line usage weighting}
+\vspace{-10mm}
+\begin{center}
+\include{tcuse_3}
+\end{center}
+}
+
+\frame{
+ \frametitle{3 loss segments}{transformer usage weighting}
+\vspace{-10mm}
+\begin{center}
+\include{txuse_3}
+\end{center}
+}
+
+
+\section[4 loss segments]{4 loss segments}
+
+\frame{
+ \frametitle{4 loss segments}{no weighting}
+\vspace{-10mm}
+\begin{center}
+\include{default_4}
+\end{center}
+}
+
+\frame{
+ \frametitle{4 loss segments}{line and transformer usage weighting}
+\vspace{-10mm}
+\begin{center}
+\include{tall_4}
+\end{center}
+}
+
+\frame{
+ \frametitle{4 loss segments}{line usage weighting}
+\vspace{-10mm}
+\begin{center}
+\include{tcuse_4}
+\end{center}
+}
+
+\frame{
+ \frametitle{4 loss segments}{transformer usage weighting}
+\vspace{-10mm}
+\begin{center}
+\include{txuse_4}
+\end{center}
+}
+
+\section[5 loss segments]{5 loss segments}
+
+\frame{
+ \frametitle{5 loss segments}{no weighting}
+\vspace{-10mm}
+\begin{center}
+\include{default_5}
+\end{center}
+}
+
+\frame{
+ \frametitle{5 loss segments}{line and transformer usage weighting}
+\vspace{-10mm}
+\begin{center}
+\include{tall_5}
+\end{center}
+}
+
+\frame{
+ \frametitle{5 loss segments}{line usage weighting}
+\vspace{-10mm}
+\begin{center}
+\include{tcuse_5}
+\end{center}
+}
+
+\frame{
+ \frametitle{5 loss segments}{transformer usage weighting}
+\vspace{-10mm}
+\begin{center}
+\include{txuse_5}
+\end{center}
+}
+
+\section[6 loss segments]{6 loss segments}
+
+\frame{
+ \frametitle{6 loss segments}{no weighting}
+\vspace{-10mm}
+\begin{center}
+\include{default_6}
+\end{center}
+}
+
+\frame{
+ \frametitle{6 loss segments}{line and transformer usage weighting}
+\vspace{-10mm}
+\begin{center}
+\include{tall_6}
+\end{center}
+}
+
+\frame{
+ \frametitle{6 loss segments}{line usage weighting}
+\vspace{-10mm}
+\begin{center}
+\include{tcuse_6}
+\end{center}
+}
+
+\frame{
+ \frametitle{6 loss segments}{transformer usage weighting}
+\vspace{-10mm}
+\begin{center}
+\include{txuse_6}
+\end{center}
+}
+
+
+\section[12 loss segments]{12 loss segments}
+
+\frame{
+ \frametitle{12 loss segments}{no weighting}
+\vspace{-10mm}
+\begin{center}
+\include{default_12}
+\end{center}
+}
+
+\frame{
+ \frametitle{12 loss segments}{line and transformer usage weighting}
+\vspace{-10mm}
+\begin{center}
+\include{tall_12}
+\end{center}
+}
+
+\frame{
+ \frametitle{12 loss segments}{line usage weighting}
+\vspace{-10mm}
+\begin{center}
+\include{tcuse_12}
+\end{center}
+}
+
+\frame{
+ \frametitle{12 loss segments}{transformer usage weighting}
+\vspace{-10mm}
+\begin{center}
+\include{txuse_12}
+\end{center}
+}
+
+
+
+\end{document}
+    

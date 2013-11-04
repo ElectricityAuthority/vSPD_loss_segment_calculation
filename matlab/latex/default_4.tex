@@ -1,0 +1,28 @@
+\begin{tikzpicture}[xscale=7.0,yscale=7.0]
+\draw [help lines,step=0.1] (0,0) grid (1,1);
+\draw[line width=0.5pt,color=black] plot file {default_4_XY.dat};
+\coordinate (oneone) at (1,1);
+\filldraw [red,draw opacity=0.75] (oneone) circle (0.1pt);
+\coordinate (bk1) at (0,0);
+\coordinate (bk2) at (0.22479,0.037898);
+\coordinate (bk3) at (0.50005,0.23742);
+\coordinate (bk4) at (0.77528,0.58843);
+\coordinate (bk5) at (1,1);
+\filldraw [red,draw opacity=0.75] (bk2) circle (0.1pt) node[right] {\tiny \texttt{(0.2248,0.0379)}};
+\filldraw [red,draw opacity=0.75] (bk3) circle (0.1pt) node[right] {\tiny \texttt{(0.5,0.2374)}};
+\filldraw [red,draw opacity=0.75] (bk4) circle (0.1pt) node[right] {\tiny \texttt{(0.7753,0.5884)}};
+\draw[line width=0.75pt,color=red,draw opacity=0.75] (bk1) -- (bk2); 
+\draw[line width=0.75pt,color=red,draw opacity=0.75] (bk2) -- (bk3); 
+\draw[line width=0.75pt,color=red,draw opacity=0.75] (bk3) -- (bk4); 
+\draw[line width=0.75pt,color=red,draw opacity=0.75] (bk4) -- (bk5); 
+\draw[->] (0,0) -- node[midway,yshift=-0.75cm] {\footnotesize flow} (1,0);
+\draw[->] (0,0) -- node[rotate=90,midway,yshift=0.75cm] {\footnotesize loss} (0,1) ;
+\foreach \x/\xtext in {0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1.0}
+\draw (\x cm,0pt) -- (\x cm,-0.5pt) node[anchor=north] {\footnotesize \xtext};
+\foreach \y/\ytext in {0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1.0}
+\draw (0.0pt,\y cm) -- (-0.25pt,\y cm) node[anchor=east,xshift=0.5mm] {\footnotesize \ytext};
+\draw[line width=0.5pt,color=green,draw opacity=0.75] plot file {default_4_err.dat};
+\foreach \y/\ytext in {0/-0.1,0.1/-0.08,0.2/-0.06,0.3/-0.04,0.4/-0.02,0.5/0.0,0.6/0.02,0.7/0.04,0.8/0.06,0.9/0.08,1.0/0.1}
+\draw (1cm,\y cm) -- (1.01cm,\y cm) node[anchor=west,xshift=-0.75mm] {\tiny \textcolor{green}{\ytext}};
+\node[rotate=90] at (1.1,0.5) {\footnotesize \textcolor{green}{error}};
+\end{tikzpicture}
